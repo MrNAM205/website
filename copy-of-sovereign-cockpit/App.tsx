@@ -16,6 +16,7 @@ import { ExportPanel } from './components/panels/ExportPanel';
 import { InvocationReplayPanel } from './components/panels/InvocationReplayPanel';
 import { CorpusAuditTrail } from './components/panels/CorpusAuditTrail';
 import { TrustCorpusDashboard } from './components/dashboards/TrustCorpusDashboard';
+import { CreditDisputeDashboard } from './components/dashboards/CreditDisputeDashboard';
 import { OmniNarrator } from './components/narrator/OmniNarrator';
 import { useInvocationFlow } from './contexts/InvocationFlowContext';
 
@@ -102,6 +103,7 @@ const App: React.FC = () => {
         <CorpusAuditTrail selectedInvocation={selectedInvocation} onSelectInvocation={handleSelectInvocation} />
         <OmniNarrator invocation={selectedInvocation} />
         <TrustCorpusDashboard />
+        <CreditDisputeDashboard />
         <ModuleGrid modules={filteredModules} onModuleClick={handleOpenModal} />
         <Footer />
         <CorpusPreviewModal isOpen={isModalOpen} onClose={handleCloseModal} module={selectedModule} />
